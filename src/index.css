@@ -1,0 +1,42 @@
+#greeting {
+  color: rgb(15, 15, 15); /* Change text color */
+  font-size: 3rem; /* Change font size */
+  text-align: left; /* Center-align the text */
+  font-family: Arial, sans-serif; /* Change the font */
+  text-indent: 30rem;
+  margin-top: 5rem;
+}
+
+#Iam {
+  color: rgb(15, 15, 15); /* Change text color */
+  font-size: 1.5rem; /* Change font size */
+  text-align: left; /* Left-align the text */
+  font-family: Arial, sans-serif; /* Change the font */
+  text-indent: 30rem; /* Apply text indent */
+
+  /* Typing effect setup */
+  border-right: 3px solid rgb(15, 15, 15); /* Cursor effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide the overflowed text */
+  
+  /* Start the animation */
+  animation: typing 1s steps(15) 1s forwards, blink 1s step-end infinite;
+  width: 0; /* Start with no visible text width */
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 30rem; /* Starts from no width (hidden text) */
+  }
+  to {
+    width: 27.5em; /* Adjust this to fit the length of your text */
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

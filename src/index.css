@@ -48,7 +48,7 @@ html, body {
 }
 
 #text1, #text2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: left;
   font-family: Arial, sans-serif;
   text-indent: 480px; /* Keep the starting position at 30em */
@@ -57,7 +57,7 @@ html, body {
   overflow: hidden;
   width: 30rem; /* Ensure enough width for text-indent */
   position: absolute; /* Overlap text1 and text2 */
-  top: 15rem;
+  top: 14rem;
 }
 
 #text1 {
@@ -73,7 +73,7 @@ html, body {
 #star1 {
   position: absolute; /* Removes the image from the normal document flow */
   top: 60%; /* Adjust the vertical position */
-  left: 80%; /* Adjust the horizontal position */
+  left: 83%; /* Adjust the horizontal position */
   z-index: 10; /* Ensures it appears above other elements */
   width: 160px; /* Adjust the size as needed */
   height: auto; /* Maintain aspect ratio */
@@ -82,12 +82,32 @@ html, body {
 #star2 {
   position: absolute; /* Removes the image from the normal document flow */
   top: 28%; /* Adjust the vertical position */
-  left: 60%; /* Adjust the horizontal position */
+  left: 65%; /* Adjust the horizontal position */
   z-index: 10; /* Ensures it appears above other elements */
   width: 130px; /* Adjust the size as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
+/* Styling for the description container */
+#description-container {
+  position: absolute; /* Position the container independently */
+  top: 350px; /* Adjust vertical position */
+  left: 480px; /* Adjust horizontal position */
+  width: 30rem; /* Set a width for the container */
+  text-align: left; /* Align text inside the container */
+}
+
+/* Styling for the description paragraph */
+#description {
+  color: rgb(15, 15, 15); /* Change text color */
+  font-weight: 80;
+  font-size: 1.15rem; /* Change font size */
+  font-family: Arial, sans-serif; /* Change the font */
+  text-indent: 0; /* Remove text-indent */
+  line-height: 2;
+  margin: 0 0 1rem 0;
+  text-align: justify;
+}
 
 /* Typing effect for text1 */
 @keyframes typing1 {

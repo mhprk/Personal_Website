@@ -1,5 +1,7 @@
 /* Ensure the body and html take up the full viewport height */
 html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;     /* Allow horizontal scrolling */
@@ -13,7 +15,7 @@ html, body {
   gap: 65px; /* Spacing between buttons */
   position: fixed; /* Fixes the navbar at the top */
   top: 55px; /* Positions the navbar at the very top of the page */
-  left: -70px; /* Aligns the navbar to the left side */
+  left: -65px; /* Aligns the navbar to the left side */
   width: 100%; /* Ensures the navbar spans the full width of the page */
   background-color: transparent; /* Optional background color with transparency */
   padding: 10px 0; /* Adds some padding around the buttons */
@@ -110,7 +112,7 @@ html, body {
 /* Styling for the description container */
 #description-container {
   position: absolute; /* Position the container independently */
-  top: 370px; /* Adjust vertical position */
+  top: 390px; /* Adjust vertical position */
   left: 480px; /* Adjust horizontal position */
   width: 30rem; /* Set a width for the container */
   text-align: left; /* Align text inside the container */
@@ -126,6 +128,47 @@ html, body {
   line-height: 2;
   margin: 0 0 1rem 0;
   text-align: justify;
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0px;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border-top: solid 3px #3a6da7;
+}
+
+#footer-content {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+#social-icons {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#social-icons a {
+  font-size: 2rem;
+  color: #2c536d;
+  transition: color 0.3s ease;
+}
+
+#social-icons a:hover {
+  color: #0077b5;
+}
+
+#social-icons a:first-child:hover {
+  color: #333;
 }
 
 /* Typing effect for text1 */

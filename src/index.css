@@ -2,11 +2,26 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Set height to 100% of the viewport */
-  overflow: hidden; /* Prevent vertical scrolling */
+  overflow-x: hidden;     /* Allow horizontal scrolling */
+  overflow-y: auto;   /* Prevent vertical scrolling */ 
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-#button {
+#button-container {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 65px; /* Spacing between buttons */
+  position: fixed; /* Fixes the navbar at the top */
+  top: 55px; /* Positions the navbar at the very top of the page */
+  left: -70px; /* Aligns the navbar to the left side */
+  width: 100%; /* Ensures the navbar spans the full width of the page */
+  background-color: transparent; /* Optional background color with transparency */
+  padding: 10px 0; /* Adds some padding around the buttons */
+  z-index: 100; /* Ensures the navbar stays on top of other elements */
+}
+
+
+#button1, #button2, #button3 {
   background: linear-gradient(
     to bottom,
     #c2e0f2 0%,
@@ -30,8 +45,12 @@ html, body {
   cursor: pointer;
   background-size: 100% 100%;
   transition: all 0.3s ease;
-  margin-left: 480px;
-  margin-top: 50px;
+}
+
+
+#button1:active {
+  transform: scale(1);
+  box-shadow: 0 0 10px #ffffff;
 }
 
 #greeting {
@@ -40,7 +59,7 @@ html, body {
   text-align: left; /* Align the text */
   font-family: Arial, sans-serif; /* Change the font */
   text-indent: 0; /* Remove text-indent for greeting */
-  margin-top: 5rem; /* Adjust spacing from the top */
+  margin-top: 7rem; /* Adjust spacing from the top */
   position: absolute; /* Position greeting independently */
   top: 90px; /* Set a fixed position relative to the parent or viewport */
   left: 485px; /* Adjust horizontal position */
@@ -57,7 +76,7 @@ html, body {
   overflow: hidden;
   width: 30rem; /* Ensure enough width for text-indent */
   position: absolute; /* Overlap text1 and text2 */
-  top: 14rem;
+  top: 16rem;
 }
 
 #text1 {
@@ -91,7 +110,7 @@ html, body {
 /* Styling for the description container */
 #description-container {
   position: absolute; /* Position the container independently */
-  top: 350px; /* Adjust vertical position */
+  top: 370px; /* Adjust vertical position */
   left: 480px; /* Adjust horizontal position */
   width: 30rem; /* Set a width for the container */
   text-align: left; /* Align text inside the container */
@@ -102,7 +121,7 @@ html, body {
   color: rgb(15, 15, 15); /* Change text color */
   font-weight: 80;
   font-size: 1.15rem; /* Change font size */
-  font-family: Arial, sans-serif; /* Change the font */
+  font-family: Arial, Helvetica, sans-serif; /* Change the font */
   text-indent: 0; /* Remove text-indent */
   line-height: 2;
   margin: 0 0 1rem 0;

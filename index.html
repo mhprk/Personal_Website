@@ -7,9 +7,20 @@
     <title>Mihyeon Park</title>
   </head>
   <body>
+
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+
     <img src="src/images/star4.png" alt="Star" id="star1" />
     <img src="src/images/star5.png" alt="Star" id="star2" />
-    <button id="button" title="About Me">About Me</button>
+    <div id="button-container">
+      <button id="button1">About Me</button>
+      <button id="button2">Projects</button>
+      <button id="button3">Contact</button>
+    </div>
     <div id="root"></div>
     <h1 id="greeting">Hello, I'm Mihyeon!</h1>
     <h2 id="Iam">
@@ -19,6 +30,17 @@
     <div id="description-container">
       <p id="description">I’m a computer programming student from South Korea, passionate about turning creative ideas into real-world applications. I enjoy exploring new technologies and pushing my skills through hands-on projects. I also love expressing myself through fashion. When I’m not coding, I love going to concerts and staying active.</p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("button1");
+        const iamSection = document.getElementById("Iam");
+
+        button.addEventListener("click", function () {
+          iamSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>

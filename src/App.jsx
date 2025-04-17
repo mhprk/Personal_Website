@@ -5,17 +5,30 @@ import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
+import * as THREE from 'three';
+import './App.css';
+import './index.css';
+import './components/Stack.css';
+import Stack from './components/Stack'
+import young from './images/young.jpg';
+import me from './images/me.jpg';
+import museum from './images/museum.jpg';
+import badminton from './images/badminton.jpg';
 
 import cardGLB from "./assets/Lanyard/card.glb";
 import lanyard from "./assets/Lanyard/Lanyard.png";
 
-import * as THREE from 'three';
-import './App.css';
-import './index.css';
-
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-export default function Lanyard({ position = [0, 0, 25], gravity = [0, -40, 0], fov = 20, transparent = true }) {
+const images = [
+    { id: 1, img: badminton },
+    { id: 2, img: me },
+    { id: 3, img: museum },
+    { id: 4, img: young },
+];
+  
+// Lanyard Component
+export function Lanyard({ position = [0, 0, 25], gravity = [0, -40, 0], fov = 20, transparent = true }) {
   return (
     <div className="lanyard-wrapper">
       <Canvas
@@ -34,9 +47,12 @@ export default function Lanyard({ position = [0, 0, 25], gravity = [0, -40, 0], 
           <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
         </Environment>
       </Canvas>
+      <Stack />
     </div>
   );
 }
+
+// Band Component
 function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef();
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3();
@@ -146,3 +162,20 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   );
 }
 
+// App Component
+function App() {
+  return (
+    <div className="App">
+      <Lanyard />
+      <Stack
+        randomRotation={false}
+        sensitivity={180}
+        sendToBackOnClick={true}
+        cardDimensions={{ width: 300, height: 200 }}
+        cardsData={images}
+      />
+    </div>
+  );
+}
+
+export default App;

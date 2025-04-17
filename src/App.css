@@ -1,8 +1,8 @@
 .lanyard-wrapper {
   position: absolute; /* or 'relative' if you need it to be inside a parent element */
   top: -5vh; /* 5% from the top of the viewport */
-  left: 45vw; 
+  left: -13vw; 
   width: 60vw; /* 80% of the viewport width */
-  height: 100vh; /* 90% of the viewport height */
+  height: 110vh; /* 90% of the viewport height */
   overflow: hidden;
 }

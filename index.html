@@ -46,7 +46,7 @@
         </a>
         <a href="https://github.com/mhprk/Personal_Website" target="_blank" class="card">
           <img src="src/images/PersonalWebsite.png" alt="Project 2 Image">
-          <h3>Project 2</h3>
+          <h3>Personal Website</h3>
           <p>My personal portfolio website.</p>
         </a>
         <a href="https://github.com/your-project-3" target="_blank" class="card">
@@ -88,12 +88,18 @@
         });
 
         // Scroll to "Projects" section
-        const button2 = document.getElementById("button2");
         button2.addEventListener("click", function () {
-          const viewportHeight = window.innerHeight; // Get the height of the viewport
-          window.scrollTo({ top: viewportHeight, behavior: "smooth" }); // Scroll to the second height
-        });
+        const viewportHeight = window.innerHeight;
+        window.scrollTo({ top: viewportHeight, behavior: "smooth" });
+
+        // Trigger the animation after a short delay (to wait for scroll)
+        setTimeout(function () {
+          document.getElementById("projects").classList.add("animate");
+        }, 1000); // Adjust delay if needed
+        
       });
+      });
+
     </script>
 
     <script type="module" src="/src/main.jsx"></script>

@@ -126,6 +126,27 @@ html, body {
   position: relative; /* Remove absolute to follow normal flow */
   left: 0; /* No need to shift if it's in the flow */
   z-index: 1;
+
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Add this class to trigger the animation */
+#projects.animate {
+  opacity: 1;
+  transform: translateY(0); /* Move to the original position */
+}
+
+/* Define the fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
 }
 
 .project-cards {

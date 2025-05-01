@@ -21,5 +21,11 @@
     pointer-events: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  }
+
+  /* Mobile Responsive Design */
+  @media screen and (max-width: 576px) {
+    .stack-container {
+      display: none; /* Hide the stack on mobile */
+    }
   }

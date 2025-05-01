@@ -33,7 +33,7 @@
     </h2>
 
     <div id="description-container">
-      <p id="description">I’m a computer programming student from South Korea, passionate about turning creative ideas into real-world applications. I enjoy exploring new technologies and pushing my skills through hands-on projects. I also love expressing myself through fashion. When I’m not coding, I love going to concerts, museums and staying active.</p>
+      <p id="description">I'm a computer programming student from South Korea, passionate about turning creative ideas into real-world applications. I enjoy exploring new technologies and pushing my skills through hands-on projects. I also love expressing myself through fashion. When I'm not coding, I love going to concerts, museums and staying active.</p>
     </div>
 
     <div id="project-container">
@@ -50,22 +50,35 @@
           <p>My personal portfolio website.</p>
         </a>
         <a href="https://github.com/your-project-3" target="_blank" class="card">
-          <img src="src/images/project3.png" alt="Project 3 Image">
-          <h3>Project 3</h3>
-          <p>A todo list app with light/dark mode.</p>
+          <img src="src/images/wip.png" alt="Project 3 Image">
+          <h3>Working on it!</h3>
+          <p>...</p>
         </a>
         <a href="https://github.com/your-project-4" target="_blank" class="card">
-          <img src="src/images/project4.png" alt="Project 4 Image">
-          <h3>Project 4</h3>
-          <p>Recipe finder that uses a public API.</p>
+          <img src="src/images/wip.png" alt="Project 4 Image">
+          <h3>Working on it!</h3>
+          <p>...</p>
         </a>
       </div>
-      
-      
-      
     </div>
-
-
+    <div id="contact-container">
+      <h2 id="contact">Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" id="submit-button">Send Message</button>
+      </form>
+    </div>
     <footer>
       <div id="footer-content">
         <div id="social-icons">
@@ -81,25 +94,53 @@
     
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        const isMobile = window.innerWidth <= 576;
+
         // Scroll to the top of the screen
         const button1 = document.getElementById("button1");
         button1.addEventListener("click", function () {
-          window.scrollTo({ top: 30, behavior: "smooth" });
+          window.scrollTo({ top: isMobile ? 25 : 5, behavior: "smooth" });
         });
 
         // Scroll to "Projects" section
+        const button2 = document.getElementById("button2");
         button2.addEventListener("click", function () {
-        const viewportHeight = window.innerHeight;
-        window.scrollTo({ top: viewportHeight, behavior: "smooth" });
+          const projectsSection = document.getElementById("project-container");
+          if (isMobile) {
+            window.scrollTo({ top: projectsSection.offsetTop - 120, behavior: "smooth" });
+          } else {
+            const viewportHeight = window.innerHeight;
+            const projectsHeight = projectsSection.offsetHeight;
+            const headerOffset = 30;
+            const scrollPosition = projectsSection.offsetTop - (viewportHeight / 2) + (projectsHeight / 2) - headerOffset;
+            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+          }
 
-        // Trigger the animation after a short delay (to wait for scroll)
-        setTimeout(function () {
-          document.getElementById("projects").classList.add("animate");
-        }, 1000); // Adjust delay if needed
-        
-      });
-      });
+          // Trigger the animation after a short delay (to wait for scroll)
+          setTimeout(function () {
+            document.getElementById("projects").classList.add("animate");
+          }, 1000);
+        });
 
+        // Scroll to "Contact" section
+        const button3 = document.getElementById("button3");
+        button3.addEventListener("click", function () {
+          const contactSection = document.getElementById("contact-container");
+          if (isMobile) {
+            window.scrollTo({ top: contactSection.offsetTop - 80, behavior: "smooth" });
+          } else {
+            const viewportHeight = window.innerHeight;
+            const contactHeight = contactSection.offsetHeight;
+            const scrollPosition = contactSection.offsetTop - (viewportHeight * 0.1);
+            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+          }
+        });
+
+        // Update mobile check on window resize
+        window.addEventListener('resize', function() {
+          isMobile = window.innerWidth <= 576;
+        });
+      });
     </script>
 
     <script type="module" src="/src/main.jsx"></script>

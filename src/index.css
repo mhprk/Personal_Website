@@ -422,20 +422,20 @@ footer {
     font-size: 1.8rem;
     top: 200px;
     width: 90%;
-    margin-top: 200px;
-    text-indent: 55px;
+    margin-top: 250px;
+    text-indent: 53px;
   }
 
   /* Mobile: About Section */
   #about-section {
-    margin-top: 90px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     text-indent: 55px;
   }
 
   #text1, #text2 {
-    text-indent: 75px;
+    text-indent: 73px;
     width: 9rem;
     font-size: 0.9rem;
     position: absolute;
@@ -513,15 +513,15 @@ footer {
   #description-container {
     left: 50%;
     transform: translateX(-50%);
-    width: 64%;
+    width: 66%;
     position: relative;
     top: 10rem;
     margin-top: 250px;
   }
 
   #description {
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.7;
     text-align: justify;
     text-indent: 0;
   }
@@ -587,12 +587,11 @@ footer {
   /* Mobile: Contact Container */
   #contact-container {
     width: 75%;
-    margin-top: 175px;
-    left: 50%;
+    margin-top: 200px;
+    margin-bottom: 290px;
+    left: 47%;
     transform: translateX(-50%);
     position: relative;
-    padding-left: 75px;
-    padding-right: 75px;
   }
 
   /* Mobile: Contact Title */

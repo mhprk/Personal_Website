@@ -321,7 +321,7 @@ footer {
   position: relative;
   width: 65%;
   margin-top: 300px;
-  margin-bottom: 280px;
+  margin-bottom: 250px;
 }
 
 #contact {
@@ -329,7 +329,7 @@ footer {
   font-size: 50px;
   text-align: left;
   font-family: Arial, sans-serif;
-  text-indent: 565px;
+  text-indent: 560px;
   position: relative;
   left: 0;
   z-index: 1;
@@ -337,7 +337,7 @@ footer {
 
 #contact-form {
   max-width: 500px;
-  margin: 45px 0 0 555px;
+  margin: 45px 0 0 545px;
   padding: 0 20px;
 }
 

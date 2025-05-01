@@ -594,10 +594,10 @@ footer {
 
   /* Mobile: Contact Container */
   #contact-container {
-    width: 75%;
+    width: 73%;
     margin-top: 200px;
     margin-bottom: 290px;
-    left: 47%;
+    left: 49%;
     transform: translateX(-50%);
     position: relative;
   }

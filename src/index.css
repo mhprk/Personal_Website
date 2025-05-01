@@ -75,7 +75,7 @@ header {
   margin-top: 7rem;
   position: absolute;
   top: 90px;
-  left: 485px;
+  left: 560px;
   z-index: 1;
 }
 
@@ -89,7 +89,7 @@ header {
   font-size: 1.4rem;
   text-align: left;
   font-family: Arial, sans-serif;
-  text-indent: 480px;
+  text-indent: 560px;
   white-space: nowrap;
   overflow: hidden;
   width: 30rem;
@@ -109,8 +109,8 @@ header {
 /* Description section */
 #description-container {
   position: absolute;
-  top: 390px;
-  left: 480px;
+  top: 450px;
+  left: 560px;
   width: 30rem;
   text-align: left;
 }
@@ -130,7 +130,7 @@ header {
 #project-container {
   position: relative;
   width: 100%;
-  margin-top: 430px;
+  margin-top: 485px;
 }
 
 #projects {
@@ -138,34 +138,37 @@ header {
   font-size: 50px;
   text-align: left;
   font-family: Arial, sans-serif;
-  text-indent: 480px;
+  text-indent: 560px;
   position: relative;
   left: 0;
   z-index: 1;
-  margin-top: 430px;
+  margin-top: 200px;
 }
 
 .project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   padding: 0 1rem;
+  justify-items: center;
+  max-width: 500px;
+  margin: 2rem auto 2rem 540px;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 300px;
+  border-radius: 1px;
+  padding: 1rem;
+  width: 220px;
   text-decoration: none;
-  color: white;
+  color: #333;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
@@ -174,21 +177,23 @@ header {
 
 .card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 1px;
   margin-bottom: 1rem;
 }
 
 .card h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+  margin: 6px 0;
+  font-size: 0.85rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #ccc;
+  margin: 0 0 6px;
+  font-size: 0.65rem;
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Decorative elements */
@@ -275,6 +280,9 @@ footer {
   80% {
     width: 35em;
   }
+  90% {
+    width: 35em;
+  }
   100% {
     width: 20em; 
   }
@@ -296,10 +304,10 @@ footer {
     width: 41em;
   }
   90% {
-    width: 41em;
+    width: 43em;
   }
   100% {
-    width: 41em;
+    width: 43em;
   }
 }
 
@@ -313,7 +321,7 @@ footer {
   position: relative;
   width: 65%;
   margin-top: 300px;
-  margin-bottom: 170px;
+  margin-bottom: 280px;
 }
 
 #contact {
@@ -321,7 +329,7 @@ footer {
   font-size: 50px;
   text-align: left;
   font-family: Arial, sans-serif;
-  text-indent: 480px;
+  text-indent: 565px;
   position: relative;
   left: 0;
   z-index: 1;
@@ -329,7 +337,7 @@ footer {
 
 #contact-form {
   max-width: 500px;
-  margin: 45px 0 0 465px;
+  margin: 45px 0 0 555px;
   padding: 0 20px;
 }
 

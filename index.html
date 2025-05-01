@@ -111,8 +111,8 @@
           } else {
             const viewportHeight = window.innerHeight;
             const projectsHeight = projectsSection.offsetHeight;
-            const headerOffset = 30;
-            const scrollPosition = projectsSection.offsetTop - (viewportHeight / 2) + (projectsHeight / 2) - headerOffset;
+            const headerOffset = 1;
+            const scrollPosition = projectsSection.offsetTop - (viewportHeight * 0.15);
             window.scrollTo({ top: scrollPosition, behavior: "smooth" });
           }
 

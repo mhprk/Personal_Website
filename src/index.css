@@ -153,7 +153,7 @@ header {
   padding: 0 1rem;
   justify-items: center;
   max-width: 500px;
-  margin: 2rem auto 2rem 540px;
+  margin: 2rem auto 2rem 500px;
 }
 
 .card {
@@ -329,7 +329,7 @@ footer {
   font-size: 50px;
   text-align: left;
   font-family: Arial, sans-serif;
-  text-indent: 560px;
+  text-indent: 500px;
   position: relative;
   left: 0;
   z-index: 1;
@@ -337,7 +337,7 @@ footer {
 
 #contact-form {
   max-width: 500px;
-  margin: 45px 0 0 545px;
+  margin: 45px 0 0 500px;
   padding: 0 20px;
 }
 

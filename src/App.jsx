@@ -16,7 +16,7 @@ import museum from './images/museum.jpg';
 import badminton from './images/badminton.jpg';
 
 import cardGLB from "./assets/Lanyard/card.glb";
-import lanyard from "./assets/Lanyard/Lanyard.png";
+import lanyard from "./assets/Lanyard/lanyard.png";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 

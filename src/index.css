@@ -454,6 +454,10 @@ footer {
     height: auto;
   }
 
+  #projects-section {
+    margin-top: 100px !important;
+  }
+
   #button-container {
     gap: 20px;
     left: 0;
@@ -471,7 +475,7 @@ footer {
     left: calc(50% - 149px);
     transform: none;
     font-size: 1.95rem;
-    top: 450px;
+    top: 320px;
     width: 90%;
     text-indent: 0;
     animation: none;
@@ -496,42 +500,42 @@ footer {
   }
 
   #text1 {
-    top: 530px;
+    top: 390px;
     animation: typeText1 1.5s steps(20) 0.5s both;
   }
 
   #text2 {
-    top: 555px;
+    top: 410px;
     animation: typeText2 2.5s steps(34) 2.2s both;
   }
 
   #description-container {
     left: calc(50% - 149px);
     transform: none;
-    width: 66%;
+    width: 78%;
     position: relative;
     top: 10rem;
-    margin-top: 430px;
+    margin-top: 290px;
     /* override hero animation on mobile */
     animation: none;
     opacity: 1;
   }
 
   #description {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     line-height: 1.7;
     text-align: justify;
     text-indent: 0;
   }
 
   #contact-container {
-    margin-top: 160px;
+    margin-top: 110px;
     margin-bottom: 100px;
     padding: 0 24px;
   }
 
   #contact {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 0;
     padding-left: 0;
     text-align: left;
@@ -551,8 +555,13 @@ footer {
   .form-group input,
   .form-group textarea {
     padding: 10px;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     font-family: "DM Sans", sans-serif;
+  }
+
+  .form-group label {
+    /* add this inside the mobile block */
+    font-size: 0.8rem;
   }
 
   #submit-button {

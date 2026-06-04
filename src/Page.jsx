@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       >
         {/* Mintii video — full width on mobile, 70% on desktop */}
         <div
-          className="w-full md:w-[70%] h-60 md:h-full shrink-0 overflow-hidden bg-black relative group cursor-pointer"
+          className="w-full md:w-[70%] h-50 md:h-full shrink-0 overflow-hidden bg-black relative group cursor-pointer"
           onClick={() => setModalOpen(true)}
         >
           <video
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
           </div>
         </div>
         {/* 2×2 project grid — right column */}
-        <div className="w-full md:w-[30%] border-t md:border-t-0 md:border-l border-gray-200 grid grid-cols-2 grid-rows-2 h-129 md:h-full">
+        <div className="w-full md:w-[30%] border-t md:border-t-0 md:border-l border-gray-200 grid grid-cols-2 grid-rows-2 h-80 md:h-full">
           {projects.slice(1, 5).map((project) => (
             <div
               key={project.id}

@@ -1,0 +1,17 @@
+.lanyard-wrapper {
+  position: absolute;
+  top: -5vh;
+  left: 3vw;
+  width: 30vw;
+  height: 115vh;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 576px) {
+  .lanyard-wrapper {
+    width: 40vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 65vh;
+  }
+}
